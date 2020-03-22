@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // Queue is your basic queue data structure
 type Queue struct {
 	slice []int
@@ -18,5 +20,14 @@ func (q *Queue) Dequeue() int {
 }
 
 func main() {
+	q := new(Queue)
+	q.Enqueue(2)
+	q.Enqueue(3)
+	q.Enqueue(5)
+	q.Enqueue(8)
 
+	v := q.Dequeue()
+
+	fmt.Println(v)
+	fmt.Println(q.slice)
 }
